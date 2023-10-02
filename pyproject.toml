@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "djangocon-us-2023-tdd-tutorial"
+version = "0.1.0"
+description = "This repository has the details about my tutorial on Mastering TDD in Django at DjangoCOn US 2023"
+authors = ["Kuldeep Pisda <hello@kdpisda.in>"]
+readme = "README.md"
+packages = [{include = "djangocon_us_2023_tdd_tutorial"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+Django = "^4.2.5"
+djangorestframework = "^3.14.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
