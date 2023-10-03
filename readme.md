@@ -6,12 +6,58 @@
 
 ---
 
-### Prerequisites
+## Prerequisites
 
-1. Git
-2. Docker and Docker Compose
-3. Poetry
-4. Python 3.11
+The following tools are required to run this project:
+
+- Git
+- Docker and Docker Compose
+- Poetry
+- Python 3.11
+
+### Installing on Windows
+
+#### Git
+- Download and install it from [git-scm.com](https://git-scm.com/download/win).
+
+#### Docker and Docker Compose
+- Download Docker Desktop for Windows from [Docker Hub](https://hub.docker.com/editions/community/docker-ce-desktop-windows/) and follow the installation instructions.
+
+#### Poetry
+- Install Poetry by running `pip install --user poetry` in your command prompt.
+
+#### Python 3.11
+- Download and install it from [python.org](https://www.python.org/downloads/).
+
+### Installing on Linux (Ubuntu)
+
+#### Git
+- Run `sudo apt-get update` and then `sudo apt-get install git` to install Git.
+
+#### Docker and Docker Compose
+- Follow the [official Docker installation guide for Ubuntu](https://docs.docker.com/engine/install/ubuntu/).
+- After installing Docker, install Docker Compose by following the [official guide](https://docs.docker.com/compose/install/).
+
+#### Poetry
+- Run `curl -sSL https://install.python-poetry.org | python3` to install Poetry.
+
+#### Python 3.11
+- Run `sudo apt-get update` and then `sudo apt-get install python3.11`.
+
+### Installing on macOS
+
+#### Git
+- If you have Homebrew installed, run `brew install git`. Otherwise, download and install it from [git-scm.com](https://git-scm.com/download/mac).
+
+#### Docker and Docker Compose
+- Download Docker Desktop for macOS from [Docker Hub](https://hub.docker.com/editions/community/docker-ce-desktop-mac/) and follow the installation instructions.
+
+#### Poetry
+- Run `brew install poetry` if you have Homebrew. Otherwise, run `pip install --user poetry`.
+
+#### Python 3.11
+- If you have Homebrew, run `brew install python@3.11`. Otherwise, download it from [python.org](https://www.python.org/downloads/mac-osx/).
+
 
 ---
 
