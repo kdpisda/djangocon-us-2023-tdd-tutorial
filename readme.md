@@ -22,7 +22,7 @@
 Clone the workshop repository to your local machine.
 
 ```bash
-git clone https://github.com/KD/djangocon-us-2023-tdd-tutorial.git
+git clone https://github.com/kdpisda/djangocon-us-2023-tdd-tutorial.git
 ```
 
 #### Step 2: Navigate to the Repository
@@ -38,7 +38,7 @@ cd djangocon-us-2023-tdd-tutorial/
 The workshop is divided into modules. Start by checking out to the initial branch.
 
 ```bash
-git checkout initial-setup
+git checkout main
 ```
 
 #### Step 4: Install Dependencies with Poetry
