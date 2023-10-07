@@ -87,7 +87,16 @@ The workshop is divided into modules. Start by checking out to the initial branc
 git checkout main
 ```
 
-#### Step 4: Install Dependencies with Poetry
+#### Step 4: Modify environment variables
+
+```bash
+cp .env.temp .temp
+```
+Then edit `.env` to be whichever value you'd like, for example you could
+use ``"dcus_tdd"`` for all three. For production you'd want to use something
+secure.
+
+#### Step 5: Install Dependencies with Poetry
 
 If you don't have Poetry installed, follow [this guide](#setting-up-dependencies-with-poetry). Then, run:
 
@@ -95,7 +104,7 @@ If you don't have Poetry installed, follow [this guide](#setting-up-dependencies
 poetry install
 ```
 
-#### Step 5: Start Docker Containers
+#### Step 6: Start Docker Containers
 
 Start the database and Redis containers.
 
@@ -103,7 +112,7 @@ Start the database and Redis containers.
 docker-compose up -d
 ```
 
-#### Step 6: Database Setup
+#### Step 7: Database Setup
 
 Run the database migrations.
 
@@ -111,7 +120,7 @@ Run the database migrations.
 poetry run python manage.py migrate
 ```
 
-#### Step 7: Create Super User
+#### Step 8: Create Super User
 
 Create a superuser to access the admin interface.
 
@@ -119,7 +128,7 @@ Create a superuser to access the admin interface.
 poetry run python manage.py createsuperuser
 ```
 
-#### Step 8: Run the Server
+#### Step 9: Run the Server
 
 Start the Django development server.
 
@@ -127,7 +136,7 @@ Start the Django development server.
 poetry run python manage.py runserver
 ```
 
-#### Step 9: Validate Setup
+#### Step 10: Validate Setup
 
 Browse to `http://127.0.0.1:8000/admin` and login using the superuser credentials to confirm everything is working as expected.
 
