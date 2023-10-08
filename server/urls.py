@@ -19,12 +19,12 @@ from django.urls import include, path
 from drf_spectacular.views import SpectacularAPIView  # noqa
 from drf_spectacular.views import SpectacularRedocView  # noqa
 from drf_spectacular.views import SpectacularSwaggerView  # noqa
-from rest_framework_simplejwt.views import TokenObtainSlidingView  # noqa
+from rest_framework_simplejwt.views import TokenObtainPairView  # noqa
 from rest_framework_simplejwt.views import TokenRefreshSlidingView  # noqa
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("auth/token/", TokenObtainSlidingView.as_view(), name="token_obtain"),
+    path("auth/token/", TokenObtainPairView.as_view(), name="token_obtain"),
     path(
         "auth/token/refresh/",
         TokenRefreshSlidingView.as_view(),
