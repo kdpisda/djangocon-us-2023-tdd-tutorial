@@ -1,12 +1,17 @@
+from django.contrib.auth import get_user_model
 from rest_framework import serializers
 
 from iam.user.serializers import UserSerializer
 from todo.items.serializers import ItemSerializer
 from todo.lists.models import List
 
+User = get_user_model()
+
 
 class ListSerializer(serializers.ModelSerializer):
-    user = UserSerializer()
+    user = serializers.PrimaryKeyRelatedField(
+        default=serializers.CurrentUserDefault(), queryset=User.objects.all()
+    )
 
     class Meta:
         model = List
