@@ -38,9 +38,13 @@ class ListTestCase(TestCase):
         # Making a POST request to the API endpoint
         response = self.client.post(self.url, data, format="json")
 
-        print(response.json())
-
         # Verifying if the list was created successfully
         self.assertEqual(response.status_code, 201)
         self.assertEqual(List.objects.count(), 1)
         self.assertEqual(List.objects.get().name, "Test List")
+
+    def test_list_todo_list(self):
+        response = self.client.get(self.url)
+
+        self.assertEquals(response.status_code, 200)
+        self.assertEquals(len(response.json()), 0)
