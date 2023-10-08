@@ -23,6 +23,9 @@ class List(TimeStampedModel):
         default=Status.PENDING,
         help_text="Status of the list",
     )
+    deadline = models.DateTimeField(
+        null=True, blank=True, help_text="Deadline of the list"
+    )
 
     def __str__(self):
         return self.name

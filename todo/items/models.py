@@ -6,6 +6,7 @@ from utils.mixins.models.timestamped_model import TimeStampedModel
 
 class Item(TimeStampedModel):
     name = models.CharField(max_length=255, help_text="Name of the item")
+    content = models.TextField(help_text="Content of the item")
     list = models.ForeignKey(
         List,
         on_delete=models.CASCADE,
@@ -17,6 +18,9 @@ class Item(TimeStampedModel):
         choices=Status.choices,
         default=Status.PENDING,
         help_text="Status of the item",
+    )
+    deadline = models.DateTimeField(
+        null=True, blank=True, help_text="Deadline of the item"
     )
 
     def __str__(self):
